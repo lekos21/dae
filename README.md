@@ -1,2 +1,2 @@
 # dae
-deep autoencoder modules for python
+Deep Autoencoder module for python
