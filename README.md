@@ -11,10 +11,10 @@ Autoencoders are useful for various applications, such as image and text data. T
 ## About this Autoencoder Module
 The dae.py module provided here has originally been designed for creating and training deep autoencoders on airfoil shape optimization. The main objective was to build an *airfoil shapes generator* with the ability to better explore the design space relatively to traditional feature extraction methods (e.g. PCA) However, it can be easily adapted and used for other applications as well. 
 
-> Think of this module as a student that you are training to generate outputs similar to what it has been trained on.
+> Think of this module as a imitator that you are training to generate outputs similar to what it has been trained on but with higher variability.
 
 It leverages the Keras library to define and train the autoencoder model.
-This module uses the *Adam optimizer*, which is an adaptive learning rate optimization algorithm. It computes individual adaptive learning rates for different parameters, allowing efficient training of the autoencoder.
+By default it uses the *Adam optimizer*, which is an adaptive learning rate optimization algorithm, but you can substitute it with any algorithm you want. It computes individual adaptive learning rates for different parameters, allowing efficient training of the autoencoder.
 
 The following hyperparameters are used in this module:
 
