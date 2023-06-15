@@ -2,7 +2,7 @@
 """
 Created on Tue Dec 22 15:15:43 2020
 
-@author: Alex
+@author: lekos
 """
 
 
@@ -86,11 +86,11 @@ def dae_build(shapes_path, hyperparams, nodes_central):
     
     
     
-    # ---------------------- STRUTTURA DELL'AUTOENCODER --------------------------
+    # ---------------------- AUTOENCODER STRUCTURE --------------------------
     
         
         
-        #Gli if servono a modificare la struttura dell'AE
+        #Setup of AE Structure
     input_img = Input(shape=X_train[0,:].shape)
     if len(nodes)>=0:
         encoded = input_img
@@ -138,16 +138,15 @@ def dae_build(shapes_path, hyperparams, nodes_central):
         decoded = layers.Dense(units=len(X_train[0,:]), activation='linear')(decoded)
     
     
+
     
-    #encoded= layers.Dropout(0.2)(encoded)
-    
-    #autoencoder.summary()
+    #preliminary stuff
     encoder = Model(input_img, encoded)
     autoencoder=Model(input_img, decoded)
     
     autoencoder.compile(optimizer=optimizer, loss='mse')
     
-    #Lancio l'autoencoder per il fit
+    #actual launch autoencoder and fit 
     track = autoencoder.fit(X_train, X_train,
                     epochs=n_epochs,
                     batch_size=batch_size,
@@ -157,11 +156,11 @@ def dae_build(shapes_path, hyperparams, nodes_central):
                     )
     
     
-    #carico il modello che ha ottenuto lo score migliore
+    #take the model with the best score
     autoencoder.load_weights('./DAE_checkpoints/model_best_'+ str(nodes) +'_'
                              + str(nodes_central) +'.hdf5')
     
-    #predizioni del dataset codificato e decodificato
+    #dataset prediction
     X_val_unscaled = scaler.inverse_transform(X_val) 
     X_train_unscaled = scaler.inverse_transform(X_train)
     
