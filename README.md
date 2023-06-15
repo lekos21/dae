@@ -34,7 +34,7 @@ Keras (version 2.0 or higher)
 NumPy
 Matplotlib
 scikit-learn
-You can install these dependencies using pip:
+You can install these dependencies running the setup.py or using pip:
 
 `pip install keras numpy matplotlib scikit-learn`
 
