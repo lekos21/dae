@@ -5,7 +5,7 @@ setup(
     version='1.0',
     url='https://github.com/lekos21/dae',
     packages=find_packages(),
-    author='Alexander Schneider',
+    author='lekos',
     author_email="alexelectrum@gmail.com",
     description='Deep autoencoder package',
     long_description='A deep autoencoder package for shape optimization',
