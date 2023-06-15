@@ -1,18 +1,18 @@
 # dae
-Deep Autoencoder module for python
+##Deep Autoencoder module for python
 
-Deep Autoencoder (DAE) Module
+## Deep Autoencoder (DAE) Module
 This is a Python module that provides functionality for creating and training deep autoencoders. Autoencoders are a type of neural network that can be used for unsupervised learning and dimensionality reduction. They are commonly used for feature extraction, anomaly detection, and data compression tasks.
 
-What is an Autoencoder?
+## What is an Autoencoder?
 An autoencoder is a neural network architecture that consists of two main parts: an encoder and a decoder. The encoder takes an input and maps it to a lower-dimensional representation called the latent space. The decoder then takes this lower-dimensional representation and reconstructs the original input as closely as possible. The encoder and decoder are trained together in an end-to-end manner to minimize the reconstruction error.
 
 Autoencoders are useful for various applications, such as image and text data. They can learn meaningful representations by capturing the most important features of the input data in the latent space. These learned representations can then be used for tasks such as data compression, denoising, and dimensionality reduction.
 
-About this Autoencoder Module
+## About this Autoencoder Module
 The dae.py module provided here is specifically designed for creating and training deep autoencoders for airfoil shape optimization. However, it can be easily adapted and used for other applications as well. It leverages the Keras library to define and train the autoencoder model.
 
-Installation
+## Installation
 To use this module, you need to have the following dependencies installed:
 
 Keras (version 2.0 or higher)
@@ -26,10 +26,10 @@ You can install these dependencies using pip:
 
 Once you have installed the dependencies, you can download the dae.py file from this repository and include it in your project.
 
-Usage
+## Usage
 Here's an example of how to use the dae.py module to train a deep autoencoder:
 
-```
+```ruby
 import numpy as np
 from autoencoder import dae
 
